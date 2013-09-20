@@ -2,10 +2,10 @@
 <widget id="com.scompo.provaphonegap" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>prova-phonegap</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Test application that uses 3 phonegap api and parses 2 XML files.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="scompo@gmail.com" href="http://scompoproject.wordpress.com">
+        Mauro Scomparin
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="permissions" value="none" />
