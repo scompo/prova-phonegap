@@ -22,10 +22,10 @@ function onFailImg(message) {
 //NOTE: Geolocation stuff.
 
 function getLocation() {
-    navigator.geolocation.getCurrentPosition(onSuccess, onFailGPS);
+    navigator.geolocation.getCurrentPosition(onSuccessGPS, onFailGPS);
 }
 
-var onSuccess = function(position) {
+var onSuccessGPS = function(position) {
     $("#location-contents").html( 'Latitude: '          + position.coords.latitude          + '\n' +
                                   'Longitude: '         + position.coords.longitude         + '\n' +
                                   'Altitude: '          + position.coords.altitude          + '\n' +
@@ -42,3 +42,4 @@ function onFailGPS(error) {
     alert('code: '    + error.code    + '\n' +
           'message: ' + error.message + '\n');
 }
+
