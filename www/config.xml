@@ -7,14 +7,10 @@
     <author email="scompo@gmail.com" href="http://scompoproject.wordpress.com">
         Mauro Scomparin
     </author>
-   <feature name="http://api.phonegap.com/1.0/device" />
-   <feature name="Device" value="org.apache.cordova.core.Device"/>
+    <feature name="http://api.phonegap.com/1.0/device" />
 	<feature name="http://api.phonegap.com/1.0/file"/>
-	<feature name="File" value="org.apache.cordova.core.FileUtils" />
     <feature name="http://api.phonegap.com/1.0/camera"/>
-	<feature name="FileTransfer" value="org.apache.cordova.core.FileTransfer" />
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
-	<feature name="Geolocation" value="org.apache.cordova.core.GeoBroker" />
 	<feature name="http://api.phonegap.com/1.0/network"/>
 	 <preference name="permissions" value="none" />
 	 <preference name="orientation" value="default" />
