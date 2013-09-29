@@ -57,14 +57,14 @@ function createXMLPage(){
 function loadXML() {
     $.ajax({
         type: "GET",
-        url: "../xml/CMPCpremessatru.xml",
+        url: "http://www.guidaalcrossmedia.it/XML/CMPCpremessatru.xml",
         dataType: "xml",
         success: parseXMLPremessa,
         error: onFailImg
     });
     $.ajax({
         type: "GET",
-        url: "../xml/CMPintro.xml",
+        url: "http://www.guidaalcrossmedia.it/XML/CMPintro.xml",
         dataType: "xml",
         success: parseXMLIntro,
         error: onFailImg
