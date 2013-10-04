@@ -58,32 +58,58 @@ function loadXML() {
     $.ajax({
         type: "GET",
         url: "http://www.guidaalcrossmedia.it/XML/CMPCpremessatru.xml",
+        //url: "xml/CMPCpremessatru.xml",
         dataType: "xml",
         success: parseXMLPremessa,
-        error: onFailImg
+        error: onFailXML
     });
     $.ajax({
         type: "GET",
         url: "http://www.guidaalcrossmedia.it/XML/CMPintro.xml",
+        //url: "xml/CMPintro.xml",
         dataType: "xml",
         success: parseXMLIntro,
-        error: onFailImg
+        error: onFailXML
     });
+}
+
+function onFailXML(error){
+    alert(error.toString());
 }
 
 //parse the xml and put it into the collapsibles.
 function parseXMLIntro(xml){
-    $(xml).find("titolo").each(function()
+    $(xml).find("paragrafo").each(function()
     {   
-       $("#intro-ul").append("<li>"+$(this).text()+"</li>");
+        var $divTemp = $('<div/>').attr("data-role", "collapsible");
+        $(this).find('titolo').each(function(){
+            var $h1Temp = $('<h3/>').text($(this).text());
+            $divTemp.append($h1Temp);
+        });
+        $(this).find('testo').each(function(){
+            var $pTemp = $("<p/>").append($(this).text());
+            //alert($(this).text());
+            $divTemp.append($pTemp);
+        });
+        $("#intro-ul").append($divTemp);
     });
 }
 
 //parse the xml and put it into the collapsibles.
 function parseXMLPremessa(xml){
-    $(xml).find("titolo").each(function()
-    {
-        $("#premessa-ul").append("<li>"+$(this).text()+"</li>");
+    $(xml).find("paragrafo").each(function()
+    {   
+        var $divTemp = $('<div/>').attr("data-role", "collapsible");
+        $(this).find('titolo').each(function(){
+            var $h1Temp = $('<h3/>').text($(this).text());
+            $divTemp.append($h1Temp);
+        });
+        $(this).find('testo').each(function(){
+            var $pTemp = $("<p/>").append($(this).text());
+            //alert($(this).text());
+            $divTemp.append($pTemp);
+        });
+        $("#premessa-ul").append($divTemp);
     });
 }
 
